@@ -1,0 +1,38 @@
+PUT /_template/app_mon_template
+{
+  "template": "appmon-*",
+"settings": {
+      "index": {
+        "number_of_shards": "1",
+        "number_of_replicas": "0"
+      }
+    },
+  "mappings":{
+        "app_log": {
+        
+            "properties": {
+                "dataSource": {
+                    "properties": {
+                        "latitude": {
+                            "type": "double"
+                        },
+                        "longitude": {
+                            "type": "double"
+                        },
+                        "timestamp": {
+                            "type": "date",
+                            "format":"yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                        }
+                    }
+                },
+                "timeStamp": {
+                     "type": "date",
+                     "format":"yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                }
+            }
+        }
+    },
+  "aliases": {
+    "search-appmonlogs": {}
+  }
+}
