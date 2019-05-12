@@ -22,6 +22,10 @@ iOS Crash 持续解析方案
 
 4.Crash收集后使用PLCrashReport format
 
+实现的效果
+![Alt text](./09_03_20__05_12_2019.jpg)
+![Alt text](./09_05_59__05_12_2019.jpg)
+
 
 一起讨论
 
